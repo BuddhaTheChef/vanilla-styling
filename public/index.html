@@ -49,6 +49,8 @@
     }
 
     .panel1 { 
+      position: relative;
+      z-index: 0;
       /* background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500) */
       background: rgba(33,33,33,0.9);
       border: solid black 1px;
@@ -105,14 +107,119 @@
       flex: 5;
     }
 
+
+    .cb-slideshow,
+.cb-slideshow:after { 
+  list-style-type: none;
+    content: '';
+    background: transparent url() repeat top left; 
+}
+
+.cb-slideshow li span { 
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg);
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_15.jpg);
+    animation-delay: 4s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg);
+    animation-delay: 8s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_19.jpg);
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_17.jpg);
+    animation-delay: 16s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg);
+    animation-delay: 20s; 
+}
+.cb-slideshow li:nth-child(7) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_11.jpg);
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(8) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_9.jpg);
+    animation-delay: 28s; 
+}
+.cb-slideshow li:nth-child(9) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_1.jpg);
+    animation-delay: 32s; 
+}
+.cb-slideshow li:nth-child(10) span { 
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_4.jpg);
+    animation-delay: 36s; 
+}
+
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
   </style>
 
 
   <div class="panels">
     <div class="panel panel1">
-      <p>My</p>
-      <p>TOP</p>
-      <p>Main</p>
+      <h1 style="position: absolute">Top</h1>
+        <ul class="cb-slideshow">
+            <li>
+              <span>Image 01</span>
+            </li>
+            <li>
+                <span>Image 02</span>
+              </li>
+              <li>
+                  <span>Image 03</span>
+                </li>
+                <li>
+                    <span>Image 04</span>
+                  </li>
+                  <li>
+                      <span>Image 05</span>
+                    </li>
+                    <li>
+                        <span>Image 06</span>
+                      </li>
+                      <li>
+                          <span>Image 07</span>
+                        </li>
+                        <li>
+                            <span>Image 08</span>
+                          </li>
+                          <li>
+                              <span>Image 09</span>
+                            </li>
+                            <li>
+                                <span>Image 10</span>
+                              </li>
+          </ul>
     </div>
     <div class="panel panel2">
       <p>My</p>
